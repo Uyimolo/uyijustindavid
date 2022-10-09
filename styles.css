@@ -36,6 +36,7 @@ p, .list{
 .section-heading {
     color: var(--white);
     width: fit-content;
+    position:relative;
 }
 .section-heading::before {
     content: "";
