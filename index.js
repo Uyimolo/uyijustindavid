@@ -8,9 +8,11 @@ const navbar = document.querySelector(".navbar");
 
   document.querySelector(".menu").addEventListener("click", () => {
     showHide(navbar,open,container);
-  })
+  });
+
   document.querySelectorAll(".nav-link").forEach((navLink) => {
     navLink.addEventListener("click", () => {
-      showHide(navbar,open,container);
+      showHide(navbar,open,container) 
+    });
     });
  
