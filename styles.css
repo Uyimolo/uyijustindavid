@@ -30,7 +30,7 @@ p, .list{
     color: var(--text);
     margin-bottom: 1em;
     line-height: 1.6;
-    font-size: .9em;
+    font-size: 1.1em;
     list-style: none;
 }
 .section-heading {
@@ -243,7 +243,7 @@ body.active {
 .links-to-work .cta{
     width: 40%;
     padding: .5em 0;
-    font-size: .9em;
+    font-size: 1em;
 }
 footer {
     padding:6em 2em 1em;
