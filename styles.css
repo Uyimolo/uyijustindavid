@@ -1,0 +1,263 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "sora";
+}
+:root {
+    --background : #04172e;
+    --white :#CCD6F6;
+    --text: #8892B0;
+    --primary :#55c4be;
+    --accent: #55c4be;
+    --links: rgb(16, 57, 243);
+    font-size: 16px;
+}
+html {
+    scroll-behavior: smooth;
+}
+a {
+    color: var(--primary);
+    position: relative;
+    text-decoration: none;
+    transition: .5s;
+}
+
+h1 {
+    font-size: 2em;
+}
+p, .list{
+    color: var(--text);
+    margin-bottom: 1em;
+    line-height: 1.6;
+    font-size: .9em;
+    list-style: none;
+}
+.section-heading {
+    color: var(--white);
+    width: fit-content;
+}
+.section-heading::before {
+    content: "";
+    height: .2em;
+    width: 0%;
+    top: 1.4em;
+    background-color: var(--primary);
+    position: absolute;
+    transition: 1.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+section:hover .section-heading::before {
+    width: 100%;
+}
+.sub-heading {
+    color: var(--white);
+}
+.icon {
+    color:var(--white);
+    font-size: 2em;
+    transition: .5s;
+}
+.icon:hover {
+    color: var(--primary);
+}
+body {
+    width: 100vw;
+    overflow-x: hidden;
+}
+.container , footer{ 
+    width: 100vw;
+    background-color: var(--background);
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding:2em;
+    align-items: center;
+    background-color:var(--background);
+    position: fixed;
+    width: 100vw;
+    z-index: 1;
+}
+.logo {
+    font-size: 1.5em;
+    font-family: "sora";
+    color: var(--accent);
+    font-weight: 700;
+}
+.navbar {
+    position: fixed;
+    background-color: var(--white);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    gap: 1em;
+    padding:10em 2em;
+    z-index: 1;
+    transform: translateX(100vw);
+    transition: .5s;
+}
+.navbar.active {
+    transform: translateX(0);
+}
+body.active {
+    overflow: hidden;
+}
+.nav-links {
+    color: var(--text);
+}
+.menu {
+    z-index: 1;
+}
+.open {
+    font-size: 1.5em;
+    color:var(--primary);
+    transition: .5s;
+}
+.open.active {
+    transform: rotateZ(90deg);
+}
+.landing {
+    display: grid;
+    height: 100vh;
+    padding: 0 2em 4em;
+    place-content: center;
+    gap: 2em;
+    width: 100%;
+}
+.introduction p {
+    color: var(--primary);
+}
+
+.name {
+    color: var(--white); 
+}
+.description {
+   display: flex;
+   flex-direction: column;
+   gap: 4em;   
+}
+.cta {
+    padding:1em 4em;
+    background-color:transparent;
+    color:var(--primary);
+    width:fit-content;
+    font-size: 1em;
+    border: none;
+    position: relative;
+    border: 2px solid var(--primary);
+    cursor: pointer;
+    transition: .5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    z-index: 0;
+}
+.cta::before {
+    content: "";
+    height: 100%;
+    width: 100%;
+    border: 2px solid var(--primary);
+    position: absolute;
+    left: .5em;
+    bottom: -.5em;
+}
+.cta:hover{
+    background-color: var(--primary);
+    color: var(--background);
+}
+.cta:hover a {
+    color: var(--background);
+}
+#about-me {
+    padding:0  2em 8em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.list {
+    display: flex;
+    justify-content: space-between;
+    color: var(--primary);
+}
+.list li{
+    border: 1px solid;
+    padding: 0 .2em;
+}
+.img-container {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 50%;
+    background-color: var(--primary);
+}
+.my-pic {
+    width: 100%;
+    display: none;
+}
+
+.works{
+    padding: 2em ;
+    display: flex;
+    flex-direction: column;
+    gap: 3.5em;
+}
+.project-tile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2em;
+    margin-bottom: 1em;
+}
+.project-tile .project-img {
+    width: 100%;
+    height: 11em;
+    background-color: var(--primary);
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+}
+.img-1 {
+    background-image: url(images/product-page.png);
+}
+.img-2{
+    background-image: url(images/uyimolo.github.io_time-tracking-dashboard_.png);
+}
+.img-3{
+    background-image: url(images/eduwise.png);
+}
+.img-4{
+    background-image: url(images/health.png);
+}
+.project-tile .project-img:hover {
+    background-blend-mode: normal;
+}
+
+.links-to-work {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+}
+.links-to-work .cta{
+    width: 40%;
+    padding: .5em 0;
+    font-size: .9em;
+}
+footer {
+    padding:6em 2em 1em;
+}
+.contact {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+.socials {
+    display: flex;
+    flex-direction: column;
+gap: 1em;
+}
+.socials .icons {
+    display: flex;
+    gap: 1em;
+}
