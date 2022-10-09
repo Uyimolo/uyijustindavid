@@ -87,7 +87,7 @@ body {
 }
 .navbar {
     position: fixed;
-    background-color: var(--white);
+    background-color: var(--background);
     top: 0;
     right: 0;
     bottom: 0;
@@ -108,7 +108,7 @@ body.active {
     overflow: hidden;
 }
 .nav-links {
-    color: var(--text);
+    color: var(--primary);
 }
 .menu {
     z-index: 1;
