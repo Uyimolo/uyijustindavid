@@ -9,8 +9,8 @@ const showHide = (...args) => {
     const container = document.querySelector("body");
     showHide(navbar,open,container);
   })
-  //document.querySelectorAll(".menu").forEach((menuBtn) => {
-  //  menuBtn.addEventListener("click", () => {
-  //    showHide(navbar, curtain);
-  //  });
- // });
+  document.querySelectorAll(".nav-link").forEach((navLink) => {
+    navLink.addEventListener("click", () => {
+      showHide(navbar,open,container);
+    });
+ 
