@@ -6,10 +6,13 @@
 }
 :root {
   --background: #04172e;
-  --white: #ccd6f6;
-  --text: #8892b0;
-  --primary: #55c4be;
-  --accent: #55c4be;
+  --backgroundlight:#04172edc;
+  --white: #f4f5f8;
+  --whitelight:rgba(255, 255, 255, 0.041);
+  --text: #767d92;
+  --primary: #65e6df;
+  --primarylight: #55c4bfc4;
+  --primarysoft:#55c4bf31;
   --links: rgb(16, 57, 243);
   font-size: 16px;
 }
@@ -29,9 +32,8 @@ h1 {
 p,
 .list {
   color: var(--text);
-  margin-bottom: 1em;
   line-height: 1.6;
-  font-size: 1.2em;
+  font-size: 1em;
   list-style: none;
 }
 .curtain {
@@ -47,9 +49,6 @@ p,
 .curtain.active {
   transform: translateX(0);
   opacity: 0.5;
-}
-.list {
-  font-size: 0.9em;
 }
 .section-heading {
   color: var(--white);
@@ -70,7 +69,8 @@ footer:hover .section-heading::before {
   width: 100%;
 }
 .sub-heading {
-  color: var(--text);
+  color: var(--white);
+  font-size: 1.1em;
 }
 section,
 footer {
@@ -99,9 +99,9 @@ footer {
 .header {
   display: flex;
   justify-content: space-between;
-  padding: 2em;
+  padding:1em 2em;
   align-items: center;
-  background-color: var(--background);
+  background-color: var(--backgroundlight);
   position: fixed;
   width: 100%;
   z-index: 1;
@@ -109,8 +109,11 @@ footer {
 .logo {
   font-size: 1.5em;
   font-family: "sora";
-  color: var(--accent);
+  color: var(--primary);
   font-weight: 700;
+  padding: 0.2em;
+  border: 2px solid var(--primary);
+  border-radius: 20%;
 }
 .navbar {
   position: absolute;
@@ -160,66 +163,78 @@ body.active {
 }
 .introduction p {
   color: var(--primary);
+  margin-bottom: 0.5em;
 }
 
 .name {
   color: var(--white);
+  font-size: 2em;
+  font-weight: 1000;
 }
 .description {
   display: flex;
   flex-direction: column;
-  gap: 4em;
+  gap: 2em;
+  font-size: 1.1em;
 }
 .cta {
-  padding: 1em 4em;
-  background-color: transparent;
-  color: var(--primary);
+  padding: 1em 0;
+  background-color: var(--primarylight);
+  color: var(--white);
   width: fit-content;
   font-size: 1em;
-  border: none;
-  position: relative;
-  border: 2px solid var(--primary);
   cursor: pointer;
-  transition: 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  transition: 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.4);
+  border-radius: 2em;
+  border: none;
 }
-.cta::before {
-  content: "";
-  height: 100%;
+.cta a {
+  color: var(--background);
   width: 100%;
-  border: 2px solid var(--primary);
-  position: absolute;
-  left: 0.5em;
-  bottom: -0.5em;
+  padding: 1em 3em ;
+  border-radius: 2em;
 }
 .cta:hover {
-  background-color: var(--primary);
-  color: var(--background);
+  background-color: transparent;
+  box-shadow: 0px 0px 50px var(--primarylight);
+  border: none;
 }
-.cta:hover a {
-  color: var(--background);
-}
-#about-me {
-  padding: 2em 2em 8em;
-}
-.list {
-  display: flex;
-  justify-content: space-between;
+.cta:hover a{
   color: var(--primary);
 }
-.list li {
-  border: 1px solid;
-  padding: 0 0.2em;
+
+#about-me {
+  padding: 2em 2em;
 }
+.lists {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1em;
+  gap: 2em;
+  width: 100%;
+  background-color: var(--whitelight);
+  padding: 1em;
+}
+.list {
+  color: var(--primary);
+  font-size: 4em;
+}
+
 .img-container {
   width: 100%;
   height: 300px;
   overflow: hidden;
-  border-radius: 50%;
-  background-color: var(--primary);
+  filter: grayscale();
+  transition: 1s;
+}
+.img-container:hover {
+  filter: none;
 }
 .my-pic {
   width: 100%;
-  display: none;
+  max-width: 300px;
+  margin: auto;
+  display: block;
 }
 
 .works {
@@ -227,20 +242,58 @@ body.active {
   gap: 3.5em;
 }
 .project-tile {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 2em;
+  transition: .5s;
+  padding: 1em 0;
+  border-radius: .5em;
+  border: .1px solid var(--primarysoft);
+  background-color: rgba(255, 255, 255, 0.041);
+  
+  margin: auto;
+}
+.project-tile:hover {
+  box-shadow: 0 0 20px var(--primarysoft);
+}
+.project-tile .sub-heading {
+  padding:0 1em;
   margin-bottom: 1em;
 }
 .project-tile .project-img {
   width: 100%;
   height: 11em;
-  background-color: var(--primary);
+  background-color: var(--primarylight);
   background-size: cover;
   background-position: center;
-  background-blend-mode: multiply;
   background-repeat: no-repeat;
+  background-blend-mode: multiply;
+}
+.project-tile:hover .project-img {
+  background-blend-mode: none;
+}
+.project-tile .project-desc p {
+  padding: 1em 1em 0;
+  margin-bottom: 1em;
+  border-top: none;
+  border-radius: 0 0 .5em .5em;
+}
+.project-tile .project-link {
+  position: relative;
+  width: fit-content;
+}
+.project-tile .project-link .icon {
+  font-size: 1.6em;
+}
+.project-tile .project-link .info {
+  position: absolute;
+  font-size: .7em;
+  background-color: var(--white);
+  border-radius: .5em;
+  padding: .5em;
+  display: none;
+  width: max-content;
+  margin-top: 1em;
+}
+.project-link a:hover + .info {
+  display: block;
 }
 .img-1 {
   background-image: url(images/product-page.png);
@@ -254,19 +307,18 @@ body.active {
 .img-4 {
   background-image: url(images/health.png);
 }
-.project-tile .project-img:hover {
-  background-blend-mode: normal;
-}
 
 .links-to-work {
   display: flex;
   justify-content: center;
   gap: 2em;
+}.links-to-work .cta a{
+  padding: 1em 0;
 }
 .links-to-work .cta {
   width: 40%;
   padding: 0.5em 0;
-  font-size: 1em;
+  font-size: 0.9em;
 }
 footer {
   padding: 2em;
@@ -277,6 +329,12 @@ footer {
 footer h3 {
   margin-bottom: 1em;
 }
+footer .cta {
+  padding: 1em 0;
+}
+footer .cta a{
+  padding: 1em 2em;
+}
 .socials {
   display: flex;
   flex-direction: column;
@@ -285,4 +343,18 @@ footer h3 {
 .socials .icons {
   display: flex;
   gap: 1em;
+}
+@media only screen and (min-width: 640px) {
+  :root {
+    font-size: 18px;
+  }
+  p {
+    font-size: .9em;
+  }
+  section {
+    padding: 5em;
+  }
+  .landing h1{
+    font-size: 3em;
+  }
 }
