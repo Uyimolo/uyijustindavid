@@ -2,16 +2,20 @@ const showHide = (...args) => {
   args.forEach((arg) => arg.classList.toggle("active"));
 };
 const navbar = document.querySelector(".navbar");
-const menu = document.querySelector(".open");
+const menu = document.querySelector(".menu");
 const container = document.querySelector("body");
 const curtain = document.querySelector(".curtain");
 
-document.querySelector(".menu").addEventListener("click", () => {
+menu.addEventListener("click", () => {
   showHide(navbar, container, menu, curtain);
+  console.log(menu.classList);
 });
 
 document.querySelectorAll(".nav-link").forEach((navLink) => {
   navLink.addEventListener("click", () => {
-    showHide(navbar, menu, container, curtain);
+    if (container.classList.contains("active")) {
+      container.classList.remove("active");
+    }
+    showHide(navbar, menu, curtain);
   });
 });
