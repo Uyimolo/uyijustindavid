@@ -74,8 +74,8 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 2em;
-  border-top: 2px solid var(--text);
-  padding: 2em;
+  border-top: .1px solid var(--text);
+  padding:6em 2em 10em;
 }
 .icon {
   color: var(--white);
@@ -151,8 +151,8 @@ body.active {
 .landing {
   display: flex;
   justify-content: center;
-  height: 100vh;
   width: 100%;
+  padding-top: 10rem;
 }
 .introduction p {
   color: var(--primary);
@@ -194,14 +194,15 @@ body.active {
 .lists {
   display: flex;
   justify-content: space-between;
-  margin-top: 1em;
+  margin: 1em 0;
   gap: 2em;
   width: 100%;
   background-color: var(--whitelight);
   padding: 1em;
+
 }
 .list {
-  color: var(--primary);
+  color: var(--white);
   font-size: 4em;
 }
 
@@ -223,7 +224,6 @@ body.active {
 
 .works {
   gap: 3.5em;
-  margin-bottom: 8em;
 }
 .project-container {
   display: grid;
@@ -232,14 +232,16 @@ body.active {
 }
 .project-tile {
   transition: 0.5s;
-  padding: 1em 0;
+  padding: 1rem 0;
   border-radius: 0.5em;
-  border: 0.1px solid var(--primarysoft);
-  background-color: rgba(255, 255, 255, 0.041);
+  border: 1px solid var(--primarysoft);
+  background-color: var(--whitelight);
   margin: auto;
+  max-width: 380px;
+  overflow: hidden;
 }
 .project-tile:hover {
-  box-shadow: 0 0 20px var(--primarysoft);
+  box-shadow: 0 0 10px var(--primarylight);
 }
 .project-tile .sub-heading {
   padding: 0 1em;
@@ -341,10 +343,12 @@ footer .cta a {
   p {
     font-size: 0.9em;
   }
-  section,
-  .header,
-  footer {
+  .header {
     padding: 2em 4em;
+  }
+  section,
+  footer {
+    padding: 8em 4em;
   }
   .curtain {
     display: none;
@@ -379,11 +383,8 @@ footer .cta a {
   .landing h1 {
     font-size: 3em;
   }
-  footer .email {
-    width: 30%;
-  }
-  footer .socials {
-    width: 30%;
+  .lists {
+    max-width: 300px;
   }
   footer .section-content {
     display: flex;
@@ -394,6 +395,9 @@ footer .cta a {
 @media only screen and (min-width: 768px) {
   .name {
     font-size: 3.5em !important;
+  }
+  .landing {
+    height: 100vh;
   }
   .landing p {
     font-size: 1.1em;
@@ -411,16 +415,18 @@ footer .cta a {
   .name {
     font-size: 5em !important;
   }
+  .landing {
+    padding-top: 5rem;
+  }
   .landing p {
-    font-size: 1.5em;
+    font-size: 1.2em;
+    width: 80%;
   }
   .section-content {
     display: flex;
     gap: 2em;
   }
-  .lists {
-    max-width: 300px;
-  }
+  
   .list {
     width: 40px;
   }
@@ -435,6 +441,8 @@ footer .cta a {
   .project-tile {
     max-width: 50%;
     margin: 0;
+    border: none;
+    background-color:var(--backgroundlightmode);
   }
   .project-tile .project-img {
     position: absolute;
