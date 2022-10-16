@@ -74,8 +74,8 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 2em;
-  border-top: .1px solid var(--text);
-  padding:6em 2em 10em;
+  border-top: 0.1px solid var(--text);
+  padding: 6em 2em 10em;
 }
 .icon {
   color: var(--white);
@@ -199,7 +199,6 @@ body.active {
   width: 100%;
   background-color: var(--whitelight);
   padding: 1em;
-
 }
 .list {
   color: var(--white);
@@ -409,6 +408,13 @@ footer .cta a {
   }
 }
 @media only screen and (min-width: 1024px) {
+  .header {
+    padding: 2em 4em;
+  }
+  section,
+  footer {
+    padding: 8em 10em;
+  }
   p {
     font-size: 1.1em;
   }
@@ -426,7 +432,9 @@ footer .cta a {
     display: flex;
     gap: 2em;
   }
-  
+  .bio p {
+    width: 90%;
+  }
   .list {
     width: 40px;
   }
@@ -442,7 +450,19 @@ footer .cta a {
     max-width: 50%;
     margin: 0;
     border: none;
-    background-color:var(--backgroundlightmode);
+    background-color: var(--backgroundlightmode);
+  }
+  .project-tile .sub-heading {
+    padding-left: 0;
+  }
+  .project-tile .project-desc p {
+    padding-left: 0;
+  }
+  .links-to-work {
+    padding-left: 0;
+  }
+  .project-tile:hover {
+    padding-left: 1em;
   }
   .project-tile .project-img {
     position: absolute;
