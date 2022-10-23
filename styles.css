@@ -20,6 +20,16 @@
 html {
   scroll-behavior: smooth;
 }
+.reveal {
+  position: relative;
+  transform: translateY(200px);
+  opacity: 0;
+  transition: 2s all ease;
+}
+.reveal.active{
+  transform: translateY(0);
+  opacity: 1;
+}
 a {
   color: var(--primary);
   position: relative;
@@ -153,6 +163,7 @@ body.active {
   justify-content: center;
   width: 100%;
   padding-top: 10rem;
+  height: 100vh;
 }
 .introduction p {
   color: var(--primary);
