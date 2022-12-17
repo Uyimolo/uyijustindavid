@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 * {
   padding: 0;
   margin: 0;
@@ -84,8 +85,7 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 2em;
-  border-top: 0.1px solid var(--text);
-  padding: 6em 2em 10em;
+  padding: 1rem 2rem 3rem;
 }
 .icon {
   color: var(--white);
@@ -104,10 +104,14 @@ body {
 footer {
   width: 100%;
 }
+footer {
+  border-top: 0.1px solid var(--text);
+  /* background-color: rgb(250, 204, 204); */
+}
 .header {
   display: flex;
   justify-content: space-between;
-  padding: 1em 2em;
+  padding: 1rem 2rem;
   align-items: center;
   background-color: var(--backgroundlight);
   position: fixed;
@@ -115,13 +119,13 @@ footer {
   z-index: 1;
 }
 .logo {
-  font-size: 1.5em;
-  font-family: "sora";
+  font-size: 1.3em;
+  font-family: "pacifico";
   color: var(--primary);
-  font-weight: 700;
-  padding: 0.2em;
-  border: 2px solid var(--primary);
-  border-radius: 20%;
+  /* font-weight: 700; */
+  /* padding: 0.2rem 1rem; */
+  /* border: 2px solid var(--primary); */
+  /* border-radius: .5rem; */
 }
 .navbar {
   position: absolute;
@@ -161,8 +165,8 @@ body.active {
 .landing {
   display: flex;
   justify-content: center;
+  align-items: flex-start;
   width: 100%;
-  padding-top: 10rem;
   height: 100vh;
 }
 .introduction p {
@@ -234,6 +238,7 @@ body.active {
 
 .works {
   gap: 3.5em;
+  /* padding: 0 1rem; */
 }
 .project-container {
   display: grid;
@@ -242,19 +247,13 @@ body.active {
 }
 .project-tile {
   transition: 0.5s;
-  padding: 1rem 0;
-  border-radius: 0.5em;
-  border: 1px solid var(--primarysoft);
-  background-color: var(--whitelight);
   margin: auto;
+  margin-bottom: .5rem;
   max-width: 380px;
-  overflow: hidden;
-}
-.project-tile:hover {
-  box-shadow: 0 0 10px var(--primarylight);
+  /* overflow: hidden; */
 }
 .project-tile .sub-heading {
-  padding: 0 1em;
+  /* padding: 0 1em; */
   margin-bottom: 1em;
 }
 .project-tile .project-img {
@@ -269,7 +268,7 @@ body.active {
   background-blend-mode: none;
 }
 .project-tile .project-desc p {
-  padding: 1em 1em 0;
+  padding: 1em 0em 0;
   margin-bottom: 1em;
   border-top: none;
   border-radius: 0 0 0.5em 0.5em;
@@ -290,6 +289,8 @@ body.active {
   display: none;
   width: max-content;
   margin-top: 1em;
+  color: black;
+  font-weight: 500;
 }
 .project-link a:hover + .info {
   display: block;
@@ -396,6 +397,9 @@ footer .cta a {
   .lists {
     max-width: 300px;
   }
+  .project-tile:hover {
+    box-shadow: 0 0 10px var(--primarylight);
+  }
   footer .section-content {
     display: flex;
     flex-direction: row;
@@ -403,6 +407,9 @@ footer .cta a {
   }
 }
 @media only screen and (min-width: 768px) {
+  .logo {
+    font-size: 1.7em;
+  }
   .name {
     font-size: 3.5em !important;
   }
@@ -417,8 +424,23 @@ footer .cta a {
     grid-template-columns: auto auto;
     gap: 2em;
   }
+  .project-tile {
+    padding: 1rem 0;
+  border-radius: 0.5em;
+  border: 1px solid var(--primarysoft);
+  background-color: var(--whitelight);
+  }
+  .project-tile .sub-heading {
+    padding: 0 1rem;
+  }
+  .project-tile .project-desc p {
+    padding:1rem 1rem 0;
+  }
 }
 @media only screen and (min-width: 1024px) {
+  .logo {
+    font-size: 2.2em;
+  }
   .header {
     padding: 2em 4em;
   }
