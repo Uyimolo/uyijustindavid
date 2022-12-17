@@ -296,16 +296,16 @@ body.active {
   display: block;
 }
 .img-1 {
-  background-image: url(images/product-page.png);
+  background-image: url(images/todo-app.png);
 }
 .img-2 {
-  background-image: url(images/uyimolo.github.io_time-tracking-dashboard_.png);
+  background-image: url(images/time-tracker.png);
 }
 .img-3 {
-  background-image: url(images/eduwise.png);
+  background-image: url(images/ecommerce-product-page.png);
 }
 .img-4 {
-  background-image: url(images/health.png);
+  background-image: url(images/credit-card.png);
 }
 
 .links-to-work {
