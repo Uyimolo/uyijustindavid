@@ -434,7 +434,7 @@ footer .cta a {
     font-size: 1.7em;
   }
   .name {
-    font-size: 3.5em !important;
+    font-size: 2.5em !important;
   }
   .landing {
     height: 100vh;
@@ -505,20 +505,17 @@ footer .cta a {
   :root {
     font-size: 18px;
   }
-  .header {
-    padding: 2em 4em;
-  }
   section,
   footer {
-    padding: 8rem 5rem;
+    padding: 8rem 5rem 3remrem;
   }
   .name {
-    font-size: 5em !important;
+    font-size: 3em !important;
   }
   .landing {
-    padding-top: 5rem;
     height: 100vh;
     justify-content: center;
+    padding: 0 4rem;
   }
   .landing p {
     width: 80%;
@@ -552,6 +549,9 @@ footer .cta a {
 @media only screen and (min-width: 1280px) {
   :root {
     font-size: 20px;
+  }
+  .name {
+    font-size: 4rem !important;
   }
   .description {
     width: 1000px;
