@@ -126,10 +126,6 @@ footer {
   font-size: 1.5em;
   font-family: "pacifico";
   color: var(--primary);
-  /* font-weight: 700; */
-  /* padding: 0.2rem 1rem; */
-  /* border: 2px solid var(--primary); */
-  /* border-radius: .5rem; */
 }
 .navbar {
   position: absolute;
@@ -167,22 +163,53 @@ body.active {
   transform: rotateZ(90deg);
 }
 .landing {
-  /* justify-content: center;
-  align-items: flex-start; */
-  /* place-content: center; */
   width: 100%;
-  /* height: 100vh; */
   padding: 8rem 2rem 2rem;
+}
+.introduction {
+  width: fit-content;
 }
 .introduction p {
   color: var(--primary);
   margin-bottom: 0.5em;
+  width: fit-content;
 }
 
 .name {
   color: var(--white);
+  border-right: 0.15em solid var(--primarylight);
   font-size: 1.9em;
   font-weight: 1000;
+  animation: blink 0.8s ease infinite forwards,
+    typewriter 10s stepS(20, end) infinite forwards;
+  /* animation: typewriter 6s stepS(20, end) infinite forwards; */
+  white-space: nowrap;
+  overflow: hidden;
+}
+@keyframes typewriter {
+  0% {
+    width: 0;
+  }
+  20% {
+    width: 0;
+  }
+  40% {
+    width: 100%;
+  }
+  80% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
+}
+@keyframes blink {
+  0% {
+    border: none;
+  }
+  100% {
+    border-right: 0.15em solid var(--primarylight);
+  }
 }
 .description {
   display: flex;
@@ -213,18 +240,22 @@ body.active {
 
 .lists {
   display: flex;
-  justify-content: space-between;
-  margin: 1em 0;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem 2rem;
+  margin: 1em auto;
   width: 100%;
-  background-color: var(--whitelight);
-  padding: 1rem;
+  max-width: 250px;
 }
 .list {
   color: var(--white);
-  font-size: 4em;
+  font-size: 3.5em;
   margin-bottom: 0;
+  width: fit-content;
 }
-
+.list2 {
+  width: 3rem;
+}
 .img-container {
   width: 100%;
   overflow: hidden;
@@ -407,8 +438,17 @@ footer .cta a {
   .landing p {
     width: 500px;
   }
+  .introduction p {
+    width: fit-content;
+  }
+  .bio {
+    position: relative;
+  }
   .lists {
-    max-width: 300px;
+    max-width: 600px;
+    left: 0;
+    right: 0;
+    margin: 1rem auto;
   }
   .project-tile {
     padding: 1rem;
@@ -438,6 +478,15 @@ footer .cta a {
   }
   .landing p {
     font-size: 1.1em;
+  }
+  .lists {
+    gap: 2rem 4rem;
+  }
+  .list {
+    font-size: 5em;
+  }
+  .list2 {
+    width: 5rem;
   }
   .project {
     width: 100%;
@@ -514,6 +563,9 @@ footer .cta a {
   }
   .landing p {
     width: 80%;
+  }
+  .introduction p {
+    width: fit-content;
   }
   .section-content {
     display: flex;
