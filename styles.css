@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -26,7 +27,7 @@ html {
   opacity: 0;
   transition: 2s all ease;
 }
-.reveal.active{
+.reveal.active {
   transform: translateY(0);
   opacity: 1;
 }
@@ -42,6 +43,7 @@ p,
   line-height: 1.6;
   font-size: 1em;
   list-style: none;
+  margin-bottom: 1em;
 }
 .curtain {
   position: fixed;
@@ -61,6 +63,8 @@ p,
   color: var(--white);
   width: fit-content;
   position: relative;
+  font-size: 1.7rem;
+  /* margin-bottom: 3rem; */
 }
 .section-heading::before {
   content: "";
@@ -77,15 +81,15 @@ footer:hover .section-heading::before {
 }
 .sub-heading {
   color: var(--white);
-  font-size: 1.1em;
+  font-size: 1.2em;
+  margin-bottom: 2em;
 }
 section,
 footer {
   display: flex;
   flex-direction: column;
   gap: 2em;
-  border-top: 0.1px solid var(--text);
-  padding: 6em 2em 10em;
+  padding: 5rem 2rem 3rem;
 }
 .icon {
   color: var(--white);
@@ -104,10 +108,14 @@ body {
 footer {
   width: 100%;
 }
+footer {
+  border-top: 0.1px solid var(--text);
+  /* background-color: rgb(250, 204, 204); */
+}
 .header {
   display: flex;
   justify-content: space-between;
-  padding: 1em 2em;
+  padding: 1rem 2rem;
   align-items: center;
   background-color: var(--backgroundlight);
   position: fixed;
@@ -116,12 +124,12 @@ footer {
 }
 .logo {
   font-size: 1.5em;
-  font-family: "sora";
+  font-family: "pacifico";
   color: var(--primary);
-  font-weight: 700;
-  padding: 0.2em;
-  border: 2px solid var(--primary);
-  border-radius: 20%;
+  /* font-weight: 700; */
+  /* padding: 0.2rem 1rem; */
+  /* border: 2px solid var(--primary); */
+  /* border-radius: .5rem; */
 }
 .navbar {
   position: absolute;
@@ -159,11 +167,12 @@ body.active {
   transform: rotateZ(90deg);
 }
 .landing {
-  display: flex;
-  justify-content: center;
+  /* justify-content: center;
+  align-items: flex-start; */
+  /* place-content: center; */
   width: 100%;
-  padding-top: 10rem;
-  height: 100vh;
+  /* height: 100vh; */
+  padding: 8rem 2rem 2rem;
 }
 .introduction p {
   color: var(--primary);
@@ -172,7 +181,7 @@ body.active {
 
 .name {
   color: var(--white);
-  font-size: 2em;
+  font-size: 1.9em;
   font-weight: 1000;
 }
 .description {
@@ -190,7 +199,7 @@ body.active {
   border-radius: 2em;
   border: none;
   background-color: transparent;
-  box-shadow: 0px 0px 100px var(--primarylight);
+  box-shadow: 0px 0px 150px var(--primarylight);
 }
 .cta a {
   width: 100%;
@@ -206,14 +215,14 @@ body.active {
   display: flex;
   justify-content: space-between;
   margin: 1em 0;
-  gap: 2em;
   width: 100%;
   background-color: var(--whitelight);
-  padding: 1em;
+  padding: 1rem;
 }
 .list {
   color: var(--white);
   font-size: 4em;
+  margin-bottom: 0;
 }
 
 .img-container {
@@ -234,6 +243,7 @@ body.active {
 
 .works {
   gap: 3.5em;
+  /* padding: 0 1rem; */
 }
 .project-container {
   display: grid;
@@ -241,21 +251,17 @@ body.active {
   gap: 2em;
 }
 .project-tile {
+  display: flex;
+  flex-direction: column;
   transition: 0.5s;
-  padding: 1rem 0;
-  border-radius: 0.5em;
-  border: 1px solid var(--primarysoft);
-  background-color: var(--whitelight);
   margin: auto;
+  margin-bottom: 1rem;
   max-width: 380px;
-  overflow: hidden;
+  /* position: relative; */
+  /* overflow: hidden; */
 }
-.project-tile:hover {
-  box-shadow: 0 0 10px var(--primarylight);
-}
-.project-tile .sub-heading {
-  padding: 0 1em;
-  margin-bottom: 1em;
+.project-tile:hover > .project-img {
+  box-shadow: 0 0 20px var(--primarylight);
 }
 .project-tile .project-img {
   width: 100%;
@@ -269,17 +275,19 @@ body.active {
   background-blend-mode: none;
 }
 .project-tile .project-desc p {
-  padding: 1em 1em 0;
-  margin-bottom: 1em;
+  padding: 1em 0;
   border-top: none;
   border-radius: 0 0 0.5em 0.5em;
+}
+.project-tile .links-to-work {
+  padding: 1rem 0;
 }
 .project-tile .project-link {
   position: relative;
   width: fit-content;
 }
 .project-tile .project-link .icon {
-  font-size: 1.6em;
+  font-size: 1.9em;
 }
 .project-tile .project-link .info {
   position: absolute;
@@ -290,21 +298,23 @@ body.active {
   display: none;
   width: max-content;
   margin-top: 1em;
+  color: black;
+  font-weight: 500;
 }
 .project-link a:hover + .info {
   display: block;
 }
 .img-1 {
-  background-image: url(images/product-page.png);
+  background-image: url(images/todo-app.png);
 }
 .img-2 {
-  background-image: url(images/uyimolo.github.io_time-tracking-dashboard_.png);
+  background-image: url(images/time-tracker.png);
 }
 .img-3 {
-  background-image: url(images/eduwise.png);
+  background-image: url(images/ecommerce-product-page.png);
 }
 .img-4 {
-  background-image: url(images/health.png);
+  background-image: url(images/credit-card.png);
 }
 
 .links-to-work {
@@ -335,6 +345,7 @@ footer h3 {
 }
 footer .cta {
   padding: 1em 0;
+  box-shadow: 0px 0px 5px var(--primarylight);
 }
 footer .cta a {
   padding: 1em 2em;
@@ -350,15 +361,12 @@ footer .cta a {
   gap: 2em;
 }
 @media only screen and (min-width: 640px) {
-  p {
-    font-size: 0.9em;
-  }
   .header {
     padding: 2em 4em;
   }
   section,
   footer {
-    padding: 8em 4em;
+    padding: 8em 4em 3rem;
   }
   .curtain {
     display: none;
@@ -390,78 +398,62 @@ footer .cta a {
   .nav-link:hover.nav-link::before {
     width: 100%;
   }
+  .landing {
+    padding: 14rem 4rem 3rem;
+  }
   .landing h1 {
     font-size: 3em;
+  }
+  .landing p {
+    width: 500px;
   }
   .lists {
     max-width: 300px;
   }
+  .project-tile {
+    padding: 1rem;
+    box-shadow: 0 0 3px var(--primarylight);
+  }
+  .project-tile:hover {
+    box-shadow: 0 0 10px var(--primarylight);
+  }
+  .project-tile:hover > .project-img {
+    box-shadow: none;
+  }
   footer .section-content {
     display: flex;
     flex-direction: row;
-    gap: 2em;
+    gap: 2rem;
   }
 }
 @media only screen and (min-width: 768px) {
-  .name {
-    font-size: 3.5em !important;
+  :root {
+    font-size: 17px;
   }
-  .landing {
-    height: 100vh;
+  .logo {
+    font-size: 1.7em;
+  }
+  .name {
+    font-size: 2.5em !important;
   }
   .landing p {
     font-size: 1.1em;
-  }
-  .project-container {
-    display: grid;
-    grid-template-columns: auto auto;
-    gap: 2em;
-  }
-}
-@media only screen and (min-width: 1024px) {
-  .header {
-    padding: 2em 4em;
-  }
-  section,
-  footer {
-    padding: 8em 10em;
-  }
-  p {
-    font-size: 1.1em;
-  }
-  .name {
-    font-size: 5em !important;
-  }
-  .landing {
-    padding-top: 5rem;
-  }
-  .landing p {
-    font-size: 1.2em;
-    width: 80%;
-  }
-  .section-content {
-    display: flex;
-    gap: 2em;
-  }
-  .bio p {
-    width: 90%;
-  }
-  .list {
-    width: 40px;
   }
   .project {
     width: 100%;
     position: relative;
+    margin: 0;
   }
   .project-container {
     grid-template-columns: 100%;
-    gap: 8em;
+    gap: 5em;
   }
   .project-tile {
     max-width: 50%;
     margin: 0;
     border: none;
     background-color: var(--backgroundlightmode);
+    box-shadow: 0 0 2px var(--primarylight);
   }
   .project-tile .sub-heading {
     padding-left: 0;
@@ -474,12 +466,16 @@ footer .cta a {
   }
   .project-tile:hover {
     padding-left: 1em;
+    box-shadow: 0 0 10px var(--primarylight);
   }
   .project-tile .project-img {
     position: absolute;
-    max-width: 43%;
-    height: 14em;
+    width: 40%;
+    height: 11rem;
     right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
     transition: 0.5s;
   }
   .project-tile .project-img::before {
@@ -494,16 +490,77 @@ footer .cta a {
     transition: 1s;
   }
   .project-tile:hover .project-img {
-    max-width: 45%;
-    height: 15em;
+    width: 45%;
+    height: 12rem;
   }
   .project-tile:hover .project-img::before {
     transform: rotatez(10deg);
     box-shadow: 0 0 50px var(--primarylight);
   }
 }
+@media only screen and (min-width: 1024px) {
+  :root {
+    font-size: 18px;
+  }
+  section,
+  footer {
+    padding: 4rem 4rem 3rem;
+  }
+  .name {
+    font-size: 2em !important;
+  }
+  .landing {
+    padding: 9rem 4rem 3rem;
+  }
+  .landing p {
+    width: 80%;
+  }
+  .section-content {
+    display: flex;
+    gap: 2em;
+  }
+  .bio-text {
+    flex-basis: 70%;
+  }
+  .bio p {
+    width: 90%;
+  }
+  .img-container {
+    flex-basis: 30%;
+  }
+  .my-pic {
+    max-width: 700px;
+  }
+  .list {
+    width: 40px;
+  }
+  .project-tile .project-img {
+    height: 14rem;
+  }
+  .project-tile:hover .project-img {
+    height: 15rem;
+  }
+}
 @media only screen and (min-width: 1280px) {
+  :root {
+    font-size: 20px;
+  }
+  .name {
+    font-size: 4rem !important;
+  }
   .description {
     width: 1000px;
+  }
+}
+@media only screen and (min-width: 1900px) {
+  :root {
+    font-size: 30px;
+  }
+  .bio-text {
+    flex-basis: 60%;
+  }
+  .img-container {
+    flex-basis: 40%;
+    max-width: 700px;
   }
 }
