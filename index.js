@@ -20,6 +20,21 @@ document.querySelectorAll(".nav-link").forEach((navLink) => {
   });
 });
 
+document.querySelectorAll(".show-work").forEach(work => work.addEventListener("click", (e)=> {
+  const clicked = e.target
+if(clicked.classList.contains("project-image")){
+  clicked.nextElementSibling.classList.add("active")
+  clicked.classList.add("active")
+  console.log(e.target)
+}
+else{
+  clicked.classList.remove("active")
+  console.log(clicked)
+  clicked.previousElementSibling.classList.remove("active")
+}
+
+}))
+
 const reveal = (e) => {
   const reveals = document.querySelectorAll(".reveal");
   reveals.forEach((reveal) => {
@@ -28,6 +43,8 @@ const reveal = (e) => {
     const elementVisible = 100;
     if (elementTop < windowHeight - elementVisible) {
       reveal.classList.add("active");
+    } else {
+      reveal.classList.remove("active");
     }
   });
 };
