@@ -321,6 +321,7 @@ body.active {
   overflow: hidden;
   position: relative;
   margin-bottom: 2rem;
+  
 }
 .project-image {
   transition: 1s;
