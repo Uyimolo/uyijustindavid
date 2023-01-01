@@ -27,12 +27,10 @@ html {
   transition: 1s all cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 .reveal.top {
-  /* transform: translateY(300px); */
 }
 .reveal.left {
   transform: translateX(300px);
   transition: 1s;
-  /* transition-delay: 1s; */
 }
 .reveal.right {
   transform: translateX(-300px);
@@ -98,6 +96,8 @@ footer {
   flex-direction: column;
   gap: 2em;
   padding: 7rem 2rem 3rem;
+  width: 100vw;
+  overflow: hidden;
 }
 .icon {
   color: var(--white);
@@ -108,7 +108,7 @@ footer {
   color: var(--primary);
 }
 body {
-  width: 100%;
+  width: 100vw;
   overflow-x: hidden;
   background: var(--background);
 }
@@ -127,7 +127,7 @@ footer {
   align-items: center;
   background-color: var(--backgroundlight);
   position: fixed;
-  width: 100%;
+  width: 100vw;
   z-index: 1;
 }
 .logo {
@@ -321,7 +321,6 @@ body.active {
   overflow: hidden;
   position: relative;
   margin-bottom: 2rem;
-  
 }
 .project-image {
   transition: 1s;
