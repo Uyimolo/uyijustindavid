@@ -27,12 +27,15 @@ html {
   transition: 1s all cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 .reveal.top {
-  transform: translateY(300px);
+  /* transform: translateY(300px); */
 }
 .reveal.left {
   transform: translateX(300px);
-  transition: 0.5s;
-  transition-delay: 1s;
+  transition: 1s;
+  /* transition-delay: 1s; */
+}
+.reveal.right {
+  transform: translateX(-300px);
 }
 .reveal.active {
   transform: translateY(0);
@@ -71,7 +74,6 @@ p,
   width: fit-content;
   position: relative;
   font-size: 1.7rem;
-  /* margin-bottom: 3rem; */
 }
 .section-heading::before {
   content: "";
@@ -95,7 +97,7 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 2em;
-  padding: 5rem 2rem 3rem;
+  padding: 7rem 2rem 3rem;
 }
 .icon {
   color: var(--white);
@@ -132,6 +134,7 @@ footer {
   font-size: 1.5em;
   font-family: "pacifico";
   color: var(--primary);
+  cursor: pointer;
 }
 .navbar {
   position: absolute;
@@ -184,7 +187,6 @@ body.active {
 }
 
 .name {
-  color: var(--white);
   border-right: 0.15em solid var(--primarylight);
   font-size: 1.9em;
   font-weight: 1000;
@@ -192,6 +194,7 @@ body.active {
     typewriter 4.5s stepS(24, end) 1 forwards;
   white-space: nowrap;
   overflow: hidden;
+  color: var(--white);
 }
 @keyframes typewriter {
   0% {
@@ -203,10 +206,9 @@ body.active {
   80% {
     width: 100%;
   }
-  100%{
+  100% {
     width: 100%;
   }
- 
 }
 @keyframes blink {
   0% {
@@ -267,6 +269,7 @@ body.active {
   overflow: hidden;
   filter: grayscale();
   transition: 1s;
+  border-radius: 3rem;
 }
 .img-container:hover {
   filter: none;
@@ -299,13 +302,13 @@ body.active {
   margin-bottom: 1rem;
   max-width: 380px;
   position: relative;
-  background: rgba(101, 230, 223, 0.06);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(2.1px);
-  -webkit-backdrop-filter: blur(2.1px);
-  border: 1px solid rgba(101, 230, 224, 0.158);
-  border-radius: 1rem;
+  border-radius: 1rem 5rem 1rem 1rem;
+  background: rgba(9, 150, 185, 0.11);
+  box-shadow: inset 0 4px 30px rgba(231, 227, 227, 0.137);
+  backdrop-filter: blur(10.4px);
+  -webkit-backdrop-filter: blur(10.4px);
+  overflow: hidden;
+  border: 1px solid rgba(173, 172, 172, 0.274);
 }
 .project-tile .sub-heading {
   padding: 1rem;
@@ -321,6 +324,7 @@ body.active {
 }
 .project-image {
   transition: 1s;
+  height: 100%;
 }
 .project-image.active {
   transform: translateY(100%);
@@ -339,12 +343,11 @@ body.active {
 .project-img .project-desc {
   position: absolute;
   inset: 0rem 0;
-  background-color: rgba(0, 0, 0, 0.808);
+  background-color: var(--backgroundlight);
   font-size: 1em;
   height: 100%;
   transform: translateY(-100%);
   transition: 1s;
-  overflow: hidden;
 }
 .project-desc.active {
   transform: translateY(0);
@@ -426,11 +429,11 @@ footer .cta a {
 }
 @media only screen and (min-width: 640px) {
   .header {
-    padding: 2em 4em;
+    padding: 2em 2em;
   }
   section,
   footer {
-    padding: 8em 4em 3rem;
+    padding: 8em 2em 3rem;
   }
   .curtain {
     display: none;
@@ -458,6 +461,12 @@ footer .cta a {
     position: absolute;
     top: 2em;
     transition: 1s;
+  }
+  .nav-link.active::before {
+    width: 100%;
+  }
+  .nav-link.active {
+    color: var(--primary);
   }
   .nav-link:hover.nav-link::before {
     width: 100%;
@@ -502,7 +511,7 @@ footer .cta a {
     font-size: 2.5em !important;
   }
   .landing {
-    padding-top: 8rem;
+    /* padding-top: 8rem; */
   }
   .landing p {
     font-size: 1.1em;
@@ -510,6 +519,15 @@ footer .cta a {
 
   .project-container {
     justify-content: center;
+    gap: 3rem;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .project-tile {
+    transition: 1s;
+  }
+  .project-tile:hover {
+    box-shadow: 0px 0px 10px var(--primary);
   }
 }
 
