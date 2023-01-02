@@ -6,22 +6,22 @@
   font-family: "sora", sans-serif;
 }
 :root {
-  --background: #00000038;
+  --background: #161616;
   /* --background: #65e6df; */
   --backgroundlightmode: linear-gradient(45deg, #e6656b4f, #55c2bc81);
   --backgroundlight: #000000d8;
   /* --white: #f4f5f8; */
-  --white : #f2f2f2;
+  --white: #f2f2f2;
   --whitelight: #bebebe;
   /* --text: #8f96ad; */
-  --text: #2a2c33;
+  --text: #d5d5d6;
   /* --primary: #65e6df; */
-  --primary : #E6656C;
-  --secondary : #65e6df;
+  --primary: #e6656c;
+  --secondary: #65e6df;
   --primarylight: #55c4bfc4;
   --primarysoft: #55c4bf31;
   /* --links: rgb(16, 57, 243); */
-  --links :#e60bf1;
+  --links: #e60bf1;
   font-size: 16px;
 }
 html {
@@ -50,7 +50,7 @@ html {
   opacity: 1;
 }
 a {
-  color: white;
+  color: var(--primary);
   position: relative;
   text-decoration: none;
   transition: 0.5s;
@@ -79,7 +79,7 @@ p,
   opacity: 0.5;
 }
 .section-heading {
-  color: var(--white);
+  color: white;
   width: fit-content;
   position: relative;
   font-size: 1.7rem;
@@ -260,7 +260,6 @@ body.active {
 } */
 .landing .cta {
   margin: auto;
-  
 }
 .cta {
   padding: 1rem 0;
@@ -272,7 +271,6 @@ body.active {
   border: none;
   background: var(--backgroundlightmode);
   /* background-color: transparent; */
-  
 }
 .cta a {
   width: 100%;
@@ -297,19 +295,17 @@ body.active {
   padding: 2rem 0;
 }
 .list {
-  color: rgba(49, 49, 117, 0.932);
+  color: var(--white);
   font-size: 2.8em;
   margin-bottom: 0;
   width: fit-content;
 }
 .list2 {
   width: 3rem;
-  fill: color: rgba(49, 49, 117, 0.932);;
 }
 .img-container {
   width: 100%;
   overflow: hidden;
-  /* filter: hue-rotate(346deg); */
   transition: 1s;
   border-radius: 3rem;
 }
@@ -346,10 +342,11 @@ body.active {
   position: relative;
   border-radius: 1rem 1rem 12rem 1rem;
   background: rgba(9, 150, 185, 0.253);
+  /* background: rgba(0, 0, 0, 0.288); */
   box-shadow: inset 0 4px 30px rgba(231, 227, 227, 0.137);
   backdrop-filter: blur(10.4px);
   -webkit-backdrop-filter: blur(10.4px);
- overflow: hidden;
+  overflow: hidden;
 
   border: 1px solid rgba(173, 172, 172, 0.274);
 }
