@@ -407,6 +407,7 @@ body.active {
 }
 .project-link a:hover + .info {
   display: block;
+  top: -3rem;
 }
 .project-img img {
   width: 100%;
