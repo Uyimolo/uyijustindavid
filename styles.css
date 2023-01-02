@@ -687,23 +687,34 @@ footer p {
 }
 @media only screen and (min-width: 1280px) {
   .header {
-    padding: 3rem 12rem;
+    padding: 3rem 6rem;
   }
   section {
-    padding: 12rem 12rem 5rem;
+    padding: 12rem 6rem 5rem;
   }
   .landing {
-    padding: 12rem 12rem 5rem;
+    padding: 12rem 6rem 5rem;
   }
   footer {
-    padding: 4rem 12rem;
+    padding: 4rem 6rem;
   }
 }
 @media only screen and (min-width: 1900px) {
   :root {
-    font-size: 27px;
+    font-size: 24px;
   }
-
+  /* .header {
+    padding: 3rem rem;
+  }
+  section {
+    padding: 12rem 8rem 5rem;
+  }
+  .landing {
+    padding: 12rem 8rem 5rem;
+  }
+  footer {
+    padding: 4rem 8rem;
+  } */
   .bio-text {
     flex-basis: 60%;
   }
@@ -713,5 +724,8 @@ footer p {
   }
   .lists {
     justify-content: center;
+  }
+  .project {
+    max-width: 450px;
   }
 }
