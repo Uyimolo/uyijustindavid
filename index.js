@@ -1,3 +1,4 @@
+//hide / show elements
 const showHide = (...args) => {
   args.forEach((arg) => arg.classList.toggle("active"));
 };
@@ -10,7 +11,7 @@ menu.addEventListener("click", () => {
   showHide(navbar, container, menu, curtain);
   console.log(menu.classList);
 });
-
+// hide navbar when navlink is clicked
 document.querySelectorAll(".nav-link").forEach((navLink) => {
   navLink.addEventListener("click", () => {
     if (container.classList.contains("active")) {
@@ -22,12 +23,12 @@ document.querySelectorAll(".nav-link").forEach((navLink) => {
 curtain.addEventListener("click", () => {
   showHide(navbar, container, menu, curtain);
 });
-
+//show hidden description of projects
 document.querySelectorAll(".show-work").forEach((work) =>
   work.addEventListener("click", (e) => {
     const clicked = e.target;
     const alreadyClicked = [...document.querySelectorAll(".clicked")];
-    // console.log(alreadyClicked
+    //close previously open description when a new one is clicked
     alreadyClicked.forEach((item) => {
       if (e.target !== item) {
         item.classList.remove("clicked");
@@ -37,15 +38,14 @@ document.querySelectorAll(".show-work").forEach((work) =>
     if (clicked.classList.contains("project-image")) {
       clicked.nextElementSibling.classList.add("clicked");
       clicked.classList.add("clicked");
-      // console.log(e.target)
     } else {
       clicked.classList.remove("clicked");
-      // console.log(clicked)
+
       clicked.previousElementSibling.classList.remove("clicked");
     }
   })
 );
-
+//scroll effect
 const reveal = (e) => {
   const reveals = document.querySelectorAll(".reveal");
   reveals.forEach((reveal) => {
