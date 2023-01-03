@@ -187,7 +187,7 @@ footer {
   font-size: 2em;
 }
 .navbar a:hover {
-  color: var(--secondary);
+  color: var(--primary);
 }
 .open {
   font-size: 1.5em;
@@ -626,7 +626,7 @@ footer .cta {
 }
 @media only screen and (min-width: 1280px) {
   .header {
-    padding: 3rem 8rem;
+    padding: 1rem 8rem;
   }
   section {
     padding: 12rem 8rem 5rem;
@@ -646,7 +646,7 @@ footer .cta {
     font-size: 24px;
   }
   .header {
-    padding: 3rem 10rem;
+    padding: 1rem 10rem;
   }
   section {
     padding: 12rem 10rem 5rem;
