@@ -105,7 +105,7 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  padding: 6rem 2rem;
+  padding: 6rem 2rem 3rem;
   width: 100vw;
   overflow: hidden;
 }
@@ -114,8 +114,8 @@ footer {
   width: 100%;
 }
 footer {
-  padding-top: 6rem;
-  border-top: 0.1px solid var(--text);
+  padding-top: 2rem;
+  /* border-top: 0.1px solid var(--secondary); */
 }
 
 .icon {
@@ -399,8 +399,8 @@ footer {
   font-size: 0.9rem;
 }
 /* contact section */
-.contact {
-  padding-bottom: 10rem;
+footer {
+  padding-bottom: 3rem;
 }
 footer .section-content {
   display: flex;
@@ -427,13 +427,13 @@ footer .cta {
 
 @media only screen and (min-width: 640px) {
   .header {
-    padding: 2rem 2rem;
+    padding: 1.2rem 2rem;
   }
   section {
     padding: 8rem 2rem 3rem;
   }
   footer {
-    padding: 3rem 2rem 3rem;
+    padding: 2rem 2rem 3rem;
   }
   .curtain {
     display: none;
@@ -512,10 +512,10 @@ footer .cta {
     box-shadow: 0 0 6px var(--primary);
   }
   section {
-    padding: 10rem 3rem 2rem;
+    padding: 7rem 3rem 2rem;
   }
   footer {
-    padding: 5rem 3rem;
+    padding: 3rem 3rem;
   }
 
   .logo {
@@ -549,7 +549,7 @@ footer .cta {
   }
   section,
   footer {
-    padding: 8rem 6rem 3rem;
+    padding: 7rem 6rem 3rem;
   }
 
   .landing {
@@ -558,7 +558,7 @@ footer .cta {
     grid-template-rows: 50% 50%;
     justify-content: space-between;
     height: fit-content;
-    padding: 10rem 6rem 3rem;
+    padding: 8rem 6rem 3rem;
     gap: 0;
   }
 
@@ -629,10 +629,10 @@ footer .cta {
     padding: 1rem 8rem;
   }
   section {
-    padding: 12rem 8rem 5rem;
+    padding: 8rem 8rem 5rem;
   }
   .landing {
-    padding: 12rem 8rem 5rem;
+    padding: 8rem 8rem 5rem;
   }
   footer {
     padding: 4rem 6rem;
