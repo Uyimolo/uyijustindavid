@@ -7,7 +7,7 @@
 }
 :root {
   --background: #0a1828;
-  --backgroundlightmode: linear-gradient(45deg, #e6656b4f, #55c2bc81);
+  --backgroundlightmode: linear-gradient(45deg, #e6656b49, #55c2bd5d);
   --text: #a0a8c4;
   --primary: #bfa181;
   --secondary: #178582;
@@ -154,7 +154,7 @@ footer {
   padding: 1rem 2rem;
   align-items: center;
   background-color: var(--background);
-  box-shadow: 0 0 5px var(--primary);
+  border-bottom: 1px solid var(--text);
   position: fixed;
   width: 100vw;
   z-index: 1;
@@ -203,7 +203,7 @@ footer {
 .landing {
   align-items: center;
   height: 100vh;
-  padding:2rem 1rem 0;
+  padding: 2rem 1rem 0;
   justify-content: center;
   gap: 4rem;
   /* background-color: yellow; */
@@ -214,11 +214,10 @@ footer {
   font-weight: 100;
   text-align: center;
   margin-bottom: 0.5rem;
-  
 }
 .title-container {
   width: fit-content;
-  margin:2rem auto 0;
+  margin: 2rem auto 0;
 }
 .title {
   color: var(--text);
@@ -335,6 +334,7 @@ footer {
 .project-image {
   height: 100%;
   transition: 1s;
+  cursor: pointer;
 }
 .project-image.clicked {
   transform: translateY(100%);
@@ -346,6 +346,7 @@ footer {
   inset: 0rem 0;
   transform: translateY(-100%);
   transition: 1s;
+  cursor: pointer;
 }
 .project-desc.clicked {
   transform: translateY(0);
@@ -355,7 +356,7 @@ footer {
 .project-desc p {
   height: 100%;
   color: var(--text);
-  padding: 1rem;
+  padding: 0 1rem;
   border-radius: 0 0 0.5em 0.5em;
   margin: auto;
   /* disabled pointer events so that the parent container (.project-desc) can recieve the event-listener */
@@ -378,9 +379,9 @@ footer {
   font-size: 1.9em;
 }
 .project-tile .project-link .info {
-  color: var(--primary);
+  color: var(--background);
   position: absolute;
-  font-size: 0.7em;
+  font-size: 0.8em;
   font-weight: 500;
   padding: 0.5rem;
   background-color: var(--white);
@@ -519,7 +520,6 @@ footer .cta {
 @media only screen and (min-width: 768px) {
   .header {
     padding: 1rem 3rem;
-    box-shadow: 0 0 6px var(--primary);
   }
   section {
     padding: 7rem 3rem 2rem;
@@ -571,9 +571,8 @@ footer .cta {
   }
 
   .introduction {
-    margin:0;
+    margin: 0;
     text-align: center;
-
   }
   .name {
     font-size: 2.5em;
@@ -582,7 +581,7 @@ footer .cta {
     width: 100%;
   }
   .title-container {
-    margin:auto auto 4rem;
+    margin: auto auto 4rem;
   }
   .title {
     margin: auto;
@@ -611,7 +610,7 @@ footer .cta {
     overflow: visible;
     margin: 0;
   }
-  .img-container.reveal.left{
+  .img-container.reveal.left {
     transform: translateX(0);
     opacity: 1;
   }
